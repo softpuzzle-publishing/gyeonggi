@@ -1,0 +1,169 @@
+.popover-container {
+    background: $gray2;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top:73px;
+    .btn {
+        border-radius: 8px;
+    }
+}
+
+
+
+.card-banner-container {
+    @at-root.advertise-badge {
+        @include noto_r_12;
+        padding: 0 6px;
+        border-radius: 8px;
+        border: 1px solid $gray5;
+        width: fit-content;
+        margin-bottom: 8px;
+        background: $white;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        a {
+            padding: 20px 20px 23px 20px;
+            width: 100%;
+            padding-bottom: 31.432%;
+            height:0;
+            display: block;
+            overflow: hidden;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        @include noto_r_12;
+        top: 20px;
+        right: 26px;
+        color: #494949;
+        width: auto;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+$swing : -460px;
+$overlap : 460px;
+
+
+
+.domin-card-container{
+    position:relative;
+    .domin-card{
+        background: url(../images/img-card-background.svg);
+        display:block;
+        width: calc(100% - 40px);height: calc(140.2439vw - 40px);
+        padding:34px 20px;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        z-index: 2;
+        margin: 0 auto;
+        transform: translateY(54px) translateX(0);
+        transform-origin: center;
+        transition: transform 0.6s cubic-bezier(.8,.2,.1,0.8) 0.1s, background 0.4s linear, width .4s .3s;
+        &:last-child{
+            margin-bottom:0;
+        }
+        &.card--next {
+            z-index: 5;
+            transform: translateY(0) translateX(0);
+        }
+        &.card--out {
+            animation: card-out .7s cubic-bezier(.8,.2,.1,0.8);
+            transform: translateY(54px) translateX(0);
+            z-index: 1;
+            .qr-btn{opacity:0;}
+        }
+        &.card--current {
+            width: 100%;
+            cursor: auto;
+            user-select: auto;
+            position: relative;
+            left: 0;
+            z-index: 10;
+            opacity: 1;
+            transform: translateX(0%);
+            .switch-btn{opacity: 0;}
+            .qr-btn{opacity:1;}
+        }
+    }
+
+    .switch-btn{
+        @include noto_m_16;
+        color: #fff;
+        border-radius: 0;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        width: auto;
+        height:30px;
+        transition: opacity .1s .4s;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 13px;
+
+        display:none;// 추후 개발시 이것만 삭제하면 됨.
+        p {
+            width: 80px;
+            text-align: center;
+            color: $white;
+        }
+    }
+
+
+    .round-btn {
+        @include noto_r_12;
+        height: 32px;
+        line-height: 14px;
+    }
+
+    .qr-btn{
+        width:60px;
+        height:60px;
+        outline: 0;
+        border: 0;
+        position:absolute;
+        bottom:36px;
+        left:28px;
+        transition: opacity .1s .05s;
+        background: transparent;
+        opacity: 0;
+        padding:0;
+        img{
+            width:60px;
+            height:60px;
+        }
+    }
+    @keyframes card-out {
+        0% { z-index: 20; transform: translateY(0px);left: 0;width: 100%; }
+        50% { transform: translateY(-110%) translateX(0); }
+        80% { z-index: 1;}
+        100% { transform: translateY(54px) translateX(0); }
+    }
+
+}

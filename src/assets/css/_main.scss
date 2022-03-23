@@ -1,0 +1,61 @@
+#main{
+    padding-top:0;
+}
+
+// Chart base
+.donut-chart {
+    position: relative;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    width:96px;
+    height:96px;
+    background-color: $gray3;
+    margin: auto;
+    &:before,
+    &:after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        border-radius: 50%;
+        background: $white;
+        width:74px;
+        height:74px;
+        content: '';
+    }
+
+    &:after {
+        @include noto_b_16;
+        color: $black;
+        z-index: 1;
+        transform: rotate(180deg) translate(50%, 50%);
+    }
+    &.active{
+        &::after{
+            content: attr(data-after);
+        }
+    }
+}
+
+.thumb-welfare{
+    display: flex;
+    flex: 1 1 33.33%;
+    >div{
+        width:100%;
+        .welfare-container{
+            height:96px;
+            border-left:1px solid $border-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        >p{
+            @include noto_r_16;
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+}

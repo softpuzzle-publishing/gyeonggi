@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%- include('../layout/_head.ejs')%>
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- app-bar -->
+        <div class="app-bar">
+            <a href="javascript:history.back();">
+                <i class="icon-back"></i>
+            </a>
+            <p>도민카드 </p>
+        </div>
+        <!-- //app-bar -->
+
+        <!-- content -->
+        <div id="container-block">
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+
+                <div class="container">
+                    <div class="domin-card-container cards--active">
+                        <div class="card bg-primary text-white domin-card member card--current">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <img src="../../assets/images/img-card-logo.svg" alt="경기도 도민카드 로고">
+                                <a href="card-list.html" class="btn btn-outline-white round-btn">상세내역</a>
+                            </div>
+                            <p class="noto-b-24 m-t-30">홍길동</p>
+                            <div class="w-100 d-flex m-t-20">
+                                <p class="noto-r-16 w-30 text-blue1">생년월일</p>
+                                <p class="noto-m-16 w-70">2022.03.17</p>
+                            </div>
+                            <div class="w-100 d-flex m-t-6">
+                                <p class="noto-r-16 w-30 text-blue1">거주지</p>
+                                <p class="noto-m-16 w-70">경기도 수원시 팔달구 효원로 1 경기도청</p>
+                            </div>
+                            <button type="button" class="qr-btn" data-toggle="modal" data-target="#modal-card-qr">
+                                <img src="../../assets/images/img-qr-btn.svg" alt="">
+                            </button>
+
+                            <button type="button" class="switch-btn">
+                                <i class="icon-domin-card"></i>
+                                <p>도민카드</p>
+                            </button>
+                        </div>
+                        <div class="card bg-green text-white domin-card point">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <img src="../../assets/images/img-point-logo.svg" alt="경기도 도민카드 포인트 로고">
+                                <a href="card-list.html" class="btn btn-outline-white round-btn">사용내역</a>
+                            </div>
+                            <p class="noto-b-24 m-t-30">홍길동</p>
+                            <div class="w-100 d-flex m-t-20">
+                                <i class="icon-domin-point m-r-8"></i>
+                                <p class="noto-m-16 text-blue1">잔여 G포인트</p>
+                            </div>
+                            <div class="m-t-4 noto-b-30">
+                                123,122,000P
+                            </div>
+                            <button type="button" class="qr-btn" data-toggle="modal" data-target="#modal-card-qr">
+                                <img src="../../assets/images/img-qr-btn.svg" alt="">
+                            </button>
+
+                            <button type="button" class="switch-btn">
+                                <i class="icon-domin-point"></i>
+                                <p>포인트</p>
+                            </button>
+                        </div>
+                    </div>
+                
+
+
+
+                    <div class="popover-container">
+                        <div class="d-flex align-items-center">
+                            <span class="noto-r-14">관련자격 확인하기</span>
+                            <a href="javascript:;" class="popover-toggler m-l-8" role="button" data-html="true" data-container="body" data-toggle="popover" data-placement="top" data-content="가족관계, 국가 유공 대상자, 의사자 정보를 포함하여 다양한 경기도 혜택 관련 자격정보를 확인할 수 있습니다">
+                                <i class="icon-popover"></i>
+                            </a>
+                        </div>
+                        <a href="" class="btn btn-sm btn-gray4">바로가기</a>
+                    </div>
+
+                    <div class="card-banner-container">
+                        <a href="" class="card bg-red1 m-t-20">
+                            <div class="">
+                                <p class="noto-b-18">경기도 ID 통합 서비스</p>
+                                <p class="noto-r-16 m-t-4">경기도 서비스를<br>하나의 계정으로 사용하세요</p>
+                            </div>
+                        </a>
+
+                        <div class="swiper-container card p-0 m-t-20">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="" class="">
+                                        <img src="../../assets/images/@img-advertisement.png" alt="">
+                                        <div class="d-flex flex-column">
+                                            <span class="advertise-badge">광고</span>
+                                            <p class="noto-b-18">경기알림톡으로<br>
+                                                혜택정보 받아보세요1</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="" class="">
+                                        <img src="../../assets/images/@portrait.jpg" alt="">
+                                        <div class="d-flex flex-column">
+                                            <span class="advertise-badge">광고</span>
+                                            <p class="noto-b-18">경기알림톡으로<br>
+                                                혜택정보 받아보세요2</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+        <!-- //content -->
+
+        <!-- 모달 -->
+        <div class="modal slideup-modal style2" id="modal-card-qr" tabindex="-1" aria-modal="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close-circle"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <p class="noto-b-24">경기도민 QR코드</p>
+                            <p class="noto-r-14 text-gray5 m-b-30">생활에 필요한 도민 정보를 확인하세요</p>
+                            <img src="../../assets/images/img-qr.png" alt="QR코드 이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //모달 끝 -->
+
+
+        <!-- floatMenu -->
+        <%- include('../layout/_floatMenu.ejs')%>
+        <!-- //floatMenu -->
+    </div>
+    <script>
+
+        // 추후 포인트 개발시 필요한 메인 화면 전환 애니메이션 스크립트
+        // $.fn.commentCards = function(){
+
+        // return this.each(function(){
+        //     var $this = $(this),
+        //         $cards = $this.find('.domin-card'),
+        //         $current = $cards.filter('.card--current'),
+        //         $next;
+
+        //     $cards.on('click',function(){
+        //         if ( !$current.is(this) ) {
+        //             $cards.removeClass('card--current card--out card--next');
+        //             $current.addClass('card--out');
+        //             $current = $(this).addClass('card--current');
+        //             $next = $current.next();
+        //             $next = $next.length ? $next : $cards.first();
+        //             $next.addClass('card--next');
+        //         }
+        //     });
+
+        //     if ( !$current.length ) {
+        //         $current = $cards.last();
+        //     }
+
+        //     $this.addClass('cards--active');
+        // })
+        // };
+
+        // $('.domin-card-container').commentCards();
+
+
+
+        // 카드 배너 스와이퍼
+        var cardBannerSwiper = new Swiper(".card-banner-container .swiper-container", {
+            slidesPerView: "1",
+            spaceBetween: 30,
+            effect: 'fade',
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+        });
+    </script>
+</body>
+
+</html>
