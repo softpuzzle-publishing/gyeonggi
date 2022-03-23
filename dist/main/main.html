@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>경기 알림톡</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+
+    <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assets/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../assets/lib/aos/aos.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/swiper/js/swiper.min.js"></script>
+    <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/lib/select2/select2.min.js"></script>
+    <script src="../assets/lib/aos/aos.js"></script>
+
+    <!-- html 파싱후 로드 됨 -->
+    <script src="../assets/js/ui.js" defer></script>
+
+</head>
+
+<body id="main">
+
+    <div id="wrap">
+
+        <!-- header -->
+        <div id="header-block ">
+            <header id="header">
+                <div class="container m-t-30">
+                    <h1 class="logo">
+                        <img src="../../assets/images/img-logo.svg" alt="경기 알림톡 이미지">
+                    </h1>
+                </div>
+            </header>
+        </div>
+        <!-- //header -->
+
+        <!-- content -->
+        <div id="container-block">
+            <main id="content" role="main">
+
+                <!-- 컨텐츠 시작 -->
+
+                <div class="main">
+
+                    <div class="container p-t-16">
+
+                        <div class="row row-20">
+                            <div class="col-12">
+                                <a href="../card/card.html" class="card bg-primary text-white align-items-center justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="../../assets/images/img-main-card.svg" alt="도민카드 이미지">
+                                        <div class="d-flex flex-column">
+                                            <p class="noto-b-18">도민카드</p>
+                                            <p class="noto-r-16 m-t-4">생활에 필요한<br>도민정보를 확인하세요.</p>
+                                        </div>
+                                    </div>
+                                    <i class="icon-arrow-home-right-white"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 p-t-20">
+                                <a href="" class="card bg-blue6 flex text-white align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <p class="noto-b-18">마이데이터</p>
+                                        <p class="noto-r-16 m-t-4">데이터로 보는<br>
+                                            나의 생활 리포트</p>
+                                    </div>
+                                    <i class="icon-arrow-home-right-white"></i>
+                                </a>
+                            </div>
+                            <div class="col-6 p-t-20">
+                                <a href="" class="card bg-blue4 text-white align-items-center justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <p class="noto-b-18">서류지갑</p>
+                                        <p class="noto-r-16 m-t-4">원하는<br>
+                                            서류 일괄 발급</p>
+                                    </div>
+                                    <i class="icon-arrow-home-right-white"></i>
+                                </a>
+                            </div>
+                            <div class="col-12 p-t-20 p-b-8">
+                                <a href="" class="card bg-blue1 align-items-center justify-content-between">
+                                    <div class="d-flex">
+                                        <img src="../../assets/images/img-main-benefit.svg" alt="혜택정보 이미지">
+                                        <div class="d-flex flex-column">
+                                            <p class="noto-b-18 text-primary">혜택정보</p>
+                                            <p class="noto-r-16 m-t-4">복지, 채용, 정책자금<br>맞춤 정보를 확인하세요.</p>
+                                        </div>
+                                    </div>
+                                    <i class="icon-arrow-home-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="page-title p-t-20">
+                            도민을 위한 맞춤 복지
+                        </div>
+
+                        <div class="thumb-welfare p-t-8">
+                            <div>
+                                <div class="welfare-containe">
+                                    <div class="chart" data-chart="1">
+                                        <div class="donut-chart"></div>
+                                    </div>
+                                </div>
+                                <p>맞춤 완성도</p>
+                            </div>
+                            <div>
+                                <div class="welfare-container">
+                                    <p class="noto-b-16">5개</p>
+                                </div>
+                                <p>접수중</p>
+                            </div>
+                            <div>
+                                <div class="welfare-container">
+                                    <p class="noto-b-16">5개</p>
+                                </div>
+                                <p>전체 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 컨텐츠 끝 -->
+
+            </main>
+        </div>
+        <!-- //content -->
+
+
+        <!-- floatMenu -->
+        <ul class="floating-menu">
+            <li class="float-menu">
+                <a href="javascript:;">
+                    <i class="icon-float-menu"></i>
+                    <i class="icon-float-close"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/main/main.html">
+                    <i class="icon-float-home"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-benefit"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-alram"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-card"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-mydata"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-wallet"></i>
+                </a>
+            </li>
+            <li class="">
+                <a href="#">
+                    <i class="icon-float-setting"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- //floatMenu -->
+    </div>
+    <script>
+        $(document).ready(function() {
+
+        });
+
+        // 맞춤완성도 차트
+        function chart() {
+            var percent = "90";
+            var percValue = percent + "%";
+            var chartPercent = percent * 3.6 + "deg";
+            $(".donut-chart").attr('data-after', percValue);
+            $(".donut-chart").css({
+                "background": "conic-gradient(#f97351 0deg, #f2cd5c " + chartPercent + ", #ddd " + chartPercent + ")"
+            });
+            $('.donut-chart').addClass('active');
+            $(".donut-chart")
+            console.log(percValue);
+            console.log(chartPercent);
+        }
+        chart()
+    </script>
+</body>
+
+</html>

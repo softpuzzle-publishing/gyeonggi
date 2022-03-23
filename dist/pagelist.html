@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>경기 알림톡 PAGELIST</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <style>
+        body {
+            padding: 20px;
+            position: relative;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            color: #222;
+            line-height: 1.5em;
+            font-family: Pretendard, arial;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #9dcfc6;
+            padding: 2px 10px;
+            word-break: keep-all
+        }
+
+        table th {
+            background: #174e44;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        table td a {
+            color: #174e44;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        table td a:hover {
+            text-decoration: underline;
+        }
+
+        table tbody tr:hover {
+            background-color: #e8fcf9;
+        }
+
+        .noteTable {
+            display: table;
+            width: 100%;
+        }
+
+        .noteTable .date {
+            display: table-cell;
+            color: #ff523c;
+            width: 40px;
+        }
+
+        .noteTable .note {
+            display: table-cell;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bg {
+            background: #fff5f5;
+        }
+
+        ul.float {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        ul.float li {
+            list-style: none;
+            border: 1px solid #ccc;
+            padding: 2px 5px;
+            display: inline-block;
+        }
+
+        .end {
+            background: #ffffcc;
+        }
+
+        .ing {
+            background: #f6b1a6;
+        }
+
+        .list {
+            text-align: center;
+            padding: 0 0 20px;
+        }
+
+        .list a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>경기 알림톡 PAGELIST</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Depth 1</th>
+                <th>Depth 2</th>
+                <th>Depth 3</th>
+                <th>Depth 4</th>
+                <th>폴더</th>
+                <th>pageLink</th>
+                <th>최초작업일</th>
+                <th>수정일</th>
+                <th></th>
+                <th>Popup&Layer</th>
+            </tr>
+        </thead>
+        <tbody id="pageList">
+            <tr>
+                <td></td>
+                <td>가이드</td>
+                <td>컴포넌트</td>
+                <td></td>
+                <td></td>
+                <td>/_guide/</td>
+                <td><a target="_blank" href="_guide/guide.html">guide.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>
+                    <div class="noteTable">
+                        <div class="date"></div>
+                        <div class="note"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>메인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/main/</td>
+                <td><a target="_blank" href="main/main.html">main.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>도민카드</td>
+                <td>index</td>
+                <td></td>
+                <td></td>
+                <td>/card/</td>
+                <td><a target="_blank" href="card/card.html">card.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td>-qr 팝업(슬라이드업)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>list</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="card/card-list.html">card-list.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td>주민등록등본</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="card/card-detail-attested.html">card-detail-attested.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td>장애인증명서</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="card/card-detail-disability.html">card-detail-disability.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td>국가유공자(유족)확인원</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="card/card-detail-merit.html">card-detail-merit.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>detail</td>
+                <td>5.18민주유공자(유족)확인원</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="card/card-detail-merit518.html">card-detail-merit518.html</a></td>
+                <td class="center"></td>
+                <td class="center"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var leng = document.querySelectorAll('tbody td a');
+        console.log(leng.length);
+
+        // var rows = document.getElementById("pageList").getElementsByTagName("tr");
+        // console.log(rows.length);
+    </script>
+</body>
+
+</html>
