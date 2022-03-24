@@ -189,37 +189,20 @@ img{max-width: 100%;}
     &.round-btn{
         border-radius: 18px;
     }
-
-    &.fixed-btn{
-        position:fixed;
-        bottom:0;
-        left:0;
-        
-    }
 }
 
 
-// 텍스트 박스 버튼 ()
-// @mixin text_box_button($color) {
-//     // color: color-yiq($background);
-//     background:$color;
-//     border-radius: 8px;    
-//     box-shadow: $box-shadow;
-//     display: flex;
-//     justify-content: space-between;
-//     .title{
-//         @include noto_b_18;
-//     }
-//     .desc{
-//         @include noto_r_16;
-//         margin-top: 4px;
-//     }
-// }
-// @each $color, $value in $theme-colors {
-//     .text-box-button-#{$color} {
-//         @include text_box_button($value);
-//     }
-// }
+//하단 버튼 고정 영역
+.fixed-btn-container{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+}
+
+
+
+//공통 카드
 .card{
     border-radius: 8px;    
     box-shadow: $box-shadow;
@@ -410,29 +393,28 @@ img{max-width: 100%;}
 
 
 //옵션 선택{
-    .options{
-        li{
+.options{
+    li{
+        a{
+            @include noto_m_18;
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding:12px 0;
+            color:$gray4;
+        }
+        & + li{
+            margin-top: 4px;
+        }
+        &.selected{
+            border-radius: 8px;
+            background: $gray2;
             a{
-                @include noto_m_18;
-                width: 100%;
-                display: block;
-                text-align: center;
-                padding:12px 0;
-                color:$gray4;
-               
-            }
-            & + li{
-                margin-top: 4px;
-            }
-            &.selected{
-                border-radius: 8px;
-                background: $gray2;
-                a{
-                    color:$dark;
-                }
+                color:$dark;
             }
         }
     }
+}
 
 
 
