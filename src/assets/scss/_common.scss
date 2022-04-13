@@ -53,6 +53,9 @@
 
 *:focus{outline: 0;}
 
+[class^=row]{align-items: stretch;}
+[class^=col-]{min-height:100%;height: 100%;}
+
 body{-webkit-font-smoothing: antialiased;letter-spacing: -0.01em; word-break: break-all; background-color: $white;}
 
 legend{overflow: hidden;position: absolute;width: 0;height: 0;line-height: 0;text-indent: -9999px;}
@@ -160,7 +163,7 @@ img{max-width: 100%;}
 
 
 //border-radius
-.border-radius{border-radius: 8px;}
+// .border-radius{border-radius: 8px;}
 
 
 // 버튼
@@ -392,7 +395,7 @@ img{max-width: 100%;}
 }
 
 
-//옵션 선택{
+//옵션 선택
 .options{
     li{
         a{
@@ -418,10 +421,36 @@ img{max-width: 100%;}
 
 
 
-[class^=row]{
-    align-items: stretch;
+//폼 그룹
+.form-control{
+    @include noto_m_20();
+    padding:11px 10px;
+    &::placeholder{
+        @include noto_m_20();
+        color:$gray4;
+    }
 }
-[class^=col-]{
-    min-height:100%;
-    height: 100%;
+
+.form-group{
+    label{
+        @include noto_m_16();
+        margin-left:10px;
+        margin-bottom:10px;
+        color:$gray5
+    }
+    input{
+
+    }
 }
+.form-control:disabled, .form-control[readonly]:focus, .form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+    border: 1px solid $border-color;
+    opacity: 1;
+    color:$gray4;
+}
+.custom-checkbox .custom-control-label{
+    @include noto_m_16();
+    color:$gray5;
+}
+.custom-checkbox .custom-control-label::before{border-radius: 0; border-color:$border-color;}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after{background-color: $blue5;}

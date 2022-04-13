@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const del = require('del');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
@@ -50,7 +50,7 @@ function scss() {
     return gulp.src(paths.scss) //개발코드 위치
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // 사스로 컴파일
-        .pipe(sourcemaps.write('.', { includeContent: true }))// 소스맵생성
+        .pipe(sourcemaps.write()) // 소스맵생성
         .pipe(gulp.dest(dist + '/assets/css')) // dist에 복사
         .pipe(connect.reload()); //변경되면 실시간 새로고침
 }
@@ -77,7 +77,7 @@ function server(done) {
     connect.server({
         root : './dist/',
         livereload : true,
-        port : 9001
+        port : 9000
     });
 
     done();
