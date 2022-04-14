@@ -1,6 +1,10 @@
+[class^=img-]{vertical-align: top;}
+
+
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;line-height: 1; width:24px; height:24px;}
 [class^=icon-arrow-]{width:16px; height:16px;}
 [class^=icon-float-]{width:50px; height:50px; box-shadow: $box-shadow; border-radius: 50%;}
+
 
 // 사이즈 24*24인 아이콘
 .icon-back{background-image: url(../images/icon-back.svg);}
@@ -56,6 +60,9 @@
 [class^=row]{align-items: stretch;}
 [class^=col-]{min-height:100%;height: 100%;}
 
+
+// 기본 정의 
+
 body{-webkit-font-smoothing: antialiased;letter-spacing: -0.01em; word-break: break-all; background-color: $white;}
 
 legend{overflow: hidden;position: absolute;width: 0;height: 0;line-height: 0;text-indent: -9999px;}
@@ -64,14 +71,17 @@ ol,
 ul,
 dl,
 li{list-style: none;margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p{margin:0; padding:0;}
 
-h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
-
-p{margin: 0;}
+*{margin:0; padding:0;}
 
 i, em{font-style: normal;}
 
 pre{white-space: pre-wrap;}
+
+
+// 넓이, 높이 정의 
+.height-60px{height:60px;}
 
 
 // 텍스트 스타일
@@ -162,10 +172,6 @@ pre{white-space: pre-wrap;}
 img{max-width: 100%;}
 
 
-//border-radius
-// .border-radius{border-radius: 8px;}
-
-
 // 버튼
 .btn{
     text-decoration: none!important;transition: none;
@@ -181,7 +187,7 @@ img{max-width: 100%;}
         line-height: 23px;
     }
     &.btn-lg{
-        @include noto_m_20;
+        @include noto_m_18;
         height:56px;
     }
     &.btn-text-box{
@@ -213,7 +219,7 @@ img{max-width: 100%;}
     flex-direction:initial;
 
     .main &{
-        padding:20px 10px 23px 16px;
+        padding:30px 10px 30px 9px;
     }
     .card-banner-container &{ 
         padding:24px 20px;

@@ -1,5 +1,12 @@
 #main{
-    padding-top:0;
+    padding-top:60px;
+    header{
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+        z-index: 2;
+    }
 }
 
 // Chart base
@@ -57,5 +64,25 @@
             text-align: center;
             margin-top: 8px;
         }
+    }
+}
+
+.main-alram{
+    position:relative;
+    height:60px;
+    display: flex;
+    align-items: center;
+    img{
+
+    }
+    .new{
+        position:absolute;
+        top:0;
+        right:0;
+        display: block;
+        width:6px;
+        height:6px;
+        border-radius: 50%;
+        background-color: $red4;
     }
 }

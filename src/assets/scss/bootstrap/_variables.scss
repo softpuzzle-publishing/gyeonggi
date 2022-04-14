@@ -42,6 +42,7 @@ $blue4:  #3B93DB !default;
 $blue3:  #AACEE8 !default;
 $blue2:  #CEE3F3 !default;
 $blue1:  #EBF8FF !default;
+$lightblue:  #F2F4F6 !default;
 
 $yellow2: #BD9300 !default;
 $yellow1: #E5B400 !default;
@@ -114,6 +115,7 @@ $colors: map-merge(
     "blue3":    $blue3,
     "blue2":    $blue2,
     "blue1":    $blue1,
+    "lightblue":    $lightblue,
     "yellow2":    $yellow2,
     "yellow1":    $yellow1,
     "red4":    $red4,
@@ -161,6 +163,7 @@ $theme-colors: map-merge(
     "blue3":    $blue3,
     "blue2":    $blue2,
     "blue1":    $blue1,
+    "lightblue":    $lightblue,
     "yellow2":    $yellow2,
     "yellow1":    $yellow1,
     "red4":    $red4,
