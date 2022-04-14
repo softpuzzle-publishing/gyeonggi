@@ -172,6 +172,10 @@ pre{white-space: pre-wrap;}
 img{max-width: 100%;}
 
 
+// 넓이 높이
+.min-width-150px{min-width: 500px;}
+
+
 // 버튼
 .btn{
     text-decoration: none!important;transition: none;
@@ -207,6 +211,7 @@ img{max-width: 100%;}
     bottom:0;
     left:0;
     width: 100%;
+    z-index: 2;
 }
 
 
@@ -438,14 +443,12 @@ img{max-width: 100%;}
 }
 
 .form-group{
+    margin-bottom: 30px;
     label{
         @include noto_m_16();
         margin-left:10px;
         margin-bottom:10px;
         color:$gray5
-    }
-    input{
-
     }
 }
 .form-control:disabled, .form-control[readonly]:focus, .form-control:disabled, .form-control[readonly] {
