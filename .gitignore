@@ -64,11 +64,9 @@ desktop.ini
 #############
 **/._*
 **/node_modules
-**/dist
 .history
 node_modules
 package-lock.json
-dist
 # svn #
 #######
 .svn
