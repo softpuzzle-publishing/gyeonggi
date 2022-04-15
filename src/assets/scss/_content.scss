@@ -169,3 +169,7 @@ $overlap : 460px;
 .personal-list{
     padding: 20px 27px;
 }
+
+[aria-expanded="true"]{
+    .icon-arrow-down{transform: rotate(180deg);}
+}
